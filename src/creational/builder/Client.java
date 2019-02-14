@@ -7,7 +7,7 @@ public class Client {
 		Waiter waiter = new Waiter();
 		
 		PizzaBuilder salamiBuilder = new SalamiPizzaBuilder();
-		PizzaBuilder hawaiBuilder = new HawaiPizzabuilder();
+		//PizzaBuilder hawaiBuilder = new HawaiPizzabuilder();
 		
 		waiter.setPizza(salamiBuilder);
 		
