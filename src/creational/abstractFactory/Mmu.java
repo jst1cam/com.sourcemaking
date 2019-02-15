@@ -1,5 +1,5 @@
 package creational.abstractFactory;
 
-public abstract class Mmu {
+public interface Mmu {
 
 }

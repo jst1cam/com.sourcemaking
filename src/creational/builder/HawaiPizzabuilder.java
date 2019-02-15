@@ -1,21 +1,23 @@
 package creational.builder;
 
-public class HawaiPizzabuilder extends PizzaBuilder{
-	
+public class HawaiPizzaBuilder extends PizzaBuilder {
 
 	@Override
-	public void setDough() {
-		pizza.setDough("hawai dough");
+	protected void setTopping() {
+		this.pizza.setTopping("hawai top");
+		
 	}
 
 	@Override
-	public void setTopping() {
-		pizza.setTopping("hawai topping");
+	protected void setDough() {
+		this.pizza.setDough("hawai dough");
+		
 	}
 
 	@Override
-	public void setSauce() {
-		pizza.setSauce("hawai sauce");
+	protected void setSauce() {
+		this.pizza.setSauce("hawai sauce");
+		
 	}
 
 }

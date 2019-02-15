@@ -2,22 +2,23 @@ package creational.builder;
 
 public class Waiter {
 	
-	PizzaBuilder pizzaBuilder;
+	PizzaBuilder builder;
 
-	public void setPizza(PizzaBuilder builder) {
-		this.pizzaBuilder = builder;		
+	public void setPizzaBuilder(PizzaBuilder salamiPizzaBuilder) {
+		builder = salamiPizzaBuilder;
+		
 	}
 
 	public void constructPizza() {
-		pizzaBuilder.createNewPizzaProduct();
-		pizzaBuilder.setDough();
-		pizzaBuilder.setSauce();
-		pizzaBuilder.setTopping();
+		builder.createNewPizzaProduct();
+		builder.setTopping();
+		builder.setDough();
+		builder.setSauce();		
 	}
 
 	public Pizza getPizza() {
 		// TODO Auto-generated method stub
-		return pizzaBuilder.getPizza();
+		return builder.getPizza();
 	}
 
 }

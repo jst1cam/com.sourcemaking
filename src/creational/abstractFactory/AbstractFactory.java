@@ -2,30 +2,28 @@ package creational.abstractFactory;
 
 public abstract class AbstractFactory {
 	
-	protected static final IntelToolset intelToolset = new IntelToolset();
-	protected static final AmdToolset amdToolset = new AmdToolset();
-
-	protected static AbstractFactory SetTool(architecture setup) {
+	private final static AbstractFactory AmdPlatformToolset = new AmdPlatform(); 
+	private final static AbstractFactory IntelPlatformToolset = new IntelPlatform();
+	
+	public static AbstractFactory getToolset(architecture setup) {
 		
 		AbstractFactory factory = null;
-		
-		switch(setup) {
+		switch (setup) {
 		
 		case INTEL : {
-			factory = intelToolset;
-			break;
+			factory = IntelPlatformToolset;
 		}
 		
 		case AMD : {
-			factory = amdToolset;
-			break;
+			factory = AmdPlatformToolset;
 		}
-			
-		}
+
+		}	
 		return factory;
 	}
 	
-	public abstract Cpu CreateCpu();
-	public abstract Mmu CreateMmu();
+	
+	public abstract Cpu createProductCpu();
+	public abstract Mmu createProductMmu();
 
 }

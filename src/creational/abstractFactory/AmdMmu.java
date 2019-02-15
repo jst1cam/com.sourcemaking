@@ -1,5 +1,5 @@
 package creational.abstractFactory;
 
-public class AmdMmu extends Mmu{
+public class AmdMmu implements Mmu{
 
 }

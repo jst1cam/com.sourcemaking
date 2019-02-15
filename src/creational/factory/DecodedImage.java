@@ -2,15 +2,15 @@ package creational.factory;
 
 public class DecodedImage {
 	
-	private String image;
+	protected String image;
 
-	public DecodedImage(String image2) {
-		this.image = image2;
+	public DecodedImage(String img) {
+		this.image = img;
 	}
 
 	@Override
 	public String toString() {
-		return image + " is decoded";
+		return image + " is decoded.";
 	}
 	
 	

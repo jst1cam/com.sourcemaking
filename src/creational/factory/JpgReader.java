@@ -2,18 +2,21 @@ package creational.factory;
 
 public class JpgReader extends ImageReader{
 	
-	private DecodedImage decodedImage;
+	protected DecodedImage decodedImage;
 	
-	public JpgReader(String image) {
-		this.decodedImage = new DecodedImage(image);
+	public JpgReader(String img) {
+		this.decodedImage = new DecodedImage(img); 
 	}
-
+	
+	/*
+	public JpgReader(String image) {
+		super(image);
+	}
+	*/
+	
 	@Override
-	public DecodedImage getDecodedImage() {
-		// TODO Auto-generated method stub
+	DecodedImage getDecodedImage() {
 		return decodedImage;
 	}
-	
-
 
 }

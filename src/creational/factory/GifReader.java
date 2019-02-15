@@ -2,15 +2,20 @@ package creational.factory;
 
 public class GifReader extends ImageReader{
 	
-	private DecodedImage decodedImage;
+	protected DecodedImage decodedImage;
 
-	public GifReader(String image) {
-		this.decodedImage = new DecodedImage(image);
+	public GifReader(String img) {
+		this.decodedImage = new DecodedImage(img); 
 	}
 
+	/*
+	public GifReader(String image) {
+		super(image);
+	}
+	*/
+
 	@Override
-	public DecodedImage getDecodedImage() {
-		// TODO Auto-generated method stub
+	DecodedImage getDecodedImage() {
 		return decodedImage;
 	}
 

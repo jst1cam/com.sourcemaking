@@ -1,24 +1,23 @@
 package creational.builder;
 
-public class SalamiPizzaBuilder extends PizzaBuilder{
-
+public class SalamiPizzaBuilder extends PizzaBuilder {
 
 	@Override
-	public void setDough() {
-		pizza.setDough("salami dough");
+	protected void setTopping() {
+		this.pizza.setTopping("salami top");
+		
 	}
 
 	@Override
-	public void setTopping() {
-		pizza.setTopping("salami topping");
+	protected void setDough() {
+		this.pizza.setDough("salami dough");
+		
 	}
 
 	@Override
-	public void setSauce() {
-		pizza.setSauce("salami sauce");
+	protected void setSauce() {
+		this.pizza.setSauce("salami sauce");
+		
 	}
-	
-	
-	
 
 }

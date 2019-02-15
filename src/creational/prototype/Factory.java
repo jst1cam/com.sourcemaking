@@ -5,24 +5,24 @@ import java.util.Map;
 
 public class Factory {
 	
-	
-	private static final Map<String, Person> protoypes = new HashMap<String, Person>();
+	private static final Map<String, Person> prototypes = new HashMap<String, Person>();
 	
 	static {
-		protoypes.put("tom", new Tom());
-		protoypes.put("harry", new Harry());	
+		prototypes.put("tom", new Tom());
+		prototypes.put("dick", new Dick());
+		prototypes.put("harry", new Harry());
 	}
-	
-	
-	public static Person getPrototypes(String type) {	
+
+	public static Person getPrototypes(String type) {
+		
 		try {
-			 return protoypes.get(type).MyClone();
+			return prototypes.get(type).MyClone();
+			
 		} catch (Exception e) {
-			System.out.println("person with " + type + " does not exist.");
+			System.out.println("person with name " + type + " does not exist.");
 			return null;
 		}
 	}
-	
 	
 	
 

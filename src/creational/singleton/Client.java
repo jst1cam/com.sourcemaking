@@ -4,19 +4,24 @@ public class Client {
 
 	public static void main(String[] args) {
 		
-		System.out.println(Singleton.SingletonHolder.getInstance());
-		System.out.println(Singleton.SingletonHolder.getInstance());
-		System.out.println(Singleton.SingletonHolder.getInstance());
-		
-		Singleton s1 = Singleton.SingletonHolder.getInstance();
-		Singleton s2 = Singleton.SingletonHolder.getInstance();
-		Singleton s3 = Singleton.SingletonHolder.getInstance();
+		//non singleton
+		Singleton s1  = new Singleton();
+		Singleton s2  = new Singleton();
+		Singleton s3  = new Singleton();
 		
 		System.out.println(s1);
 		System.out.println(s2);
 		System.out.println(s3);
-	
 
+		//singleton
+		Singleton ss1  = Singleton.getInstance();
+		Singleton ss2  = Singleton.getInstance();
+		Singleton ss3  = Singleton.getInstance();
+		
+		System.out.println(ss1);
+		System.out.println(ss2);
+		System.out.println(ss3);
+		
 		
 
 	}

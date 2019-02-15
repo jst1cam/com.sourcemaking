@@ -2,6 +2,16 @@ package creational.factory;
 
 public abstract class ImageReader {
 	
-	public abstract DecodedImage getDecodedImage();
+	abstract DecodedImage getDecodedImage();
 
+	/*
+	protected DecodedImage decodedImage;
+	
+	public ImageReader(String image) {
+		this.decodedImage = new DecodedImage(image);
+	}
+	
+	*/
+	
 }
+

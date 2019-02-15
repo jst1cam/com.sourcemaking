@@ -4,26 +4,20 @@ public class Client {
 
 	public static void main(String[] args) {
 		
+		Pizza readyPizza;
+		
 		Waiter waiter = new Waiter();
 		
-		PizzaBuilder salamiBuilder = new SalamiPizzaBuilder();
-		//PizzaBuilder hawaiBuilder = new HawaiPizzabuilder();
-		
-		waiter.setPizza(salamiBuilder);
+		PizzaBuilder salamiPizzaBuilder = new SalamiPizzaBuilder();
+		PizzaBuilder hawaiPizzaBuilder = new HawaiPizzaBuilder();
+
+		waiter.setPizzaBuilder(salamiPizzaBuilder);
 		
 		waiter.constructPizza();
 		
-		Pizza readyPizza = waiter.getPizza();
+		readyPizza = waiter.getPizza();
 		
 		System.out.println(readyPizza);
-		
-		System.out.println(
-				readyPizza.getDough() + ", " +
-				readyPizza.getSauce() + ", " +
-				readyPizza.getTopping());
-		
-
-		
 		
 	}
 
