@@ -1,5 +1,7 @@
 package creational.abstractFactory;
 
-public class AmdCpu implements Cpu{
+public class AmdCpu extends Cpu{
+	
+	
 
 }

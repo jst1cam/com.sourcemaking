@@ -5,13 +5,10 @@ public class Client {
 
 	public static void main(String[] args) {
 		
-		AbstractFactory factory = AbstractFactory.setPlatformTool(architecture.INTEL);
-		Cpu cpuProduct = factory.GetCpuProduct();
-		Mmu mmuProduct = factory.GetMmuProduct();
+		AbstractFactory factory =  AbstractFactory.getFactory(architecture.AMD);
 		
-		System.out.println(cpuProduct);
-		System.out.println(mmuProduct);
-		
+		factory.CreateCpuProduct();
+		factory.CreateMmuProduct();
 
 	}
 

@@ -2,6 +2,6 @@ package creational.prototype;
 
 public interface Person {
 	
-	Person MyClone();
-
+	public Person myClone();
+	
 }

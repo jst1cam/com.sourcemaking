@@ -1,5 +1,5 @@
 package creational.abstractFactory;
 
-public interface Cpu {
+public abstract class Cpu {
 
 }

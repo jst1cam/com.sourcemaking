@@ -2,10 +2,10 @@ package creational.prototype;
 
 public class Dick implements Person{
 	
-	private final static String NAME = "Dick";
+	private final String NAME = "Dick";
 
 	@Override
-	public Person MyClone() {
+	public Person myClone() {
 		// TODO Auto-generated method stub
 		return new Dick();
 	}

@@ -7,15 +7,19 @@ public class Client {
 
 	public static void main(String[] args) {
 		
-		String[] myArgs = new String[] {"tom", "dick", "harry", "victoria"};
-				
-		for (String type : myArgs) {
-			Person person = Prototype.getPerson(type);
+		String[] ar = new String[] {"Tom", "Dick", "Victoria"};
+		
+		for (String item : ar) {
+			
+			Person person = ProtoTypeContainer.getPrototype(item);
+			
 			if (person != null) {
-				System.out.println(person);		
-			}		
+				person.toString();
+			}
+			
 		}
-	
+		
+
 	}
 
 }
